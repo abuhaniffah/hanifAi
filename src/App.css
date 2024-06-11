@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  background-color: #1E1E1E; /* Updated background color */
+  background-color: #1E1E1E;
   font-family: 'Arial', sans-serif;
   color: #FFFFFF;
   margin: 0;
@@ -13,17 +13,17 @@ body {
 
 /* Root Container */
 #root {
-  max-width: 1280px; /* Added max-width */
-  margin: 0 auto; /* Centering the content */
-  padding: 2rem; /* Added padding */
-  text-align: center; /* Centering the text */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 /* Main Container */
 main {
   padding: 2rem;
   border-radius: 15px;
-  background-color: #25283D; /* Updated background color */
+  background-color: #25283D;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -32,7 +32,7 @@ h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   text-align: center;
-  color: #FFD700; /* Updated text color */
+  color: #FFD700;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -47,7 +47,7 @@ form {
 input[type="text"] {
   padding: 10px;
   font-size: 1rem;
-  border: 2px solid #FFD700; /* Updated border color */
+  border: 2px solid #FFD700;
   border-radius: 10px;
   transition: all 0.3s;
 }
@@ -85,7 +85,7 @@ button:hover {
   width: 60px;
   height: 60px;
   border: 6px solid rgba(255, 255, 255, 0.3);
-  border-top: 6px solid #FFD700; /* Updated border color */
+  border-top: 6px solid #FFD700;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -105,6 +105,7 @@ button:hover {
   padding: 15px !important;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow-x: auto; /* Add horizontal scroll */
 }
 
 /* Logo Styles */
@@ -132,27 +133,25 @@ button:hover {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  main {
+    padding: 1rem;
   }
-}
 
-/* Card Styles */
-.card {
-  padding: 2em;
-  border-radius: 10px;
-  background-color: #25283D; /* Updated background color */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
-}
+  h1 {
+    font-size: 2.5rem;
+  }
 
-/* Remove border from image */
-.card img {
-  border: none;
-}
+  .logo {
+    height: 4em;
+  }
 
-.read-the-docs {
-  color: #888;
-  text-align: center;
+  .syntax-highlighter {
+    padding: 10px !important;
+  }
+
+  .max-w-xl {
+    max-width: 100%;
+  }
 }

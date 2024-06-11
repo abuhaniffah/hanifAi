@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div id="root" className="min-h-screen bg-gray-900 text-white flex justify-center items-center">
-      <main className='flex flex-col min-h-[80vh] justify-center items-center max-w-xl w-full mx-auto px-4'>
+      <main className='flex flex-col justify-center items-center max-w-xl w-full mx-auto px-4'>
         <h1 className="text-4xl font-bold mb-6 text-blue-500">Abu Groq AI</h1>
         <div className="card mb-6">
           <img src={newLogo} className="w-24 h-24 mx-auto mb-4 rounded-full" alt="New logo" />
@@ -61,9 +61,11 @@ function App() {
               <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-24 w-24"></div>
             </div>
           ) : data ? (
-            <SyntaxHighLight language="swift" style={darcula} className="p-4 rounded-md bg-gray-800">
-              {data.toString()}
-            </SyntaxHighLight>
+            <div className="overflow-y-auto max-h-96">
+              <SyntaxHighLight language="swift" style={darcula} wrapLongLines={true} className="p-4 rounded-md bg-gray-800">
+                {data.toString()}
+              </SyntaxHighLight>
+            </div>
           ) : null}
         </div>
         <div className="mt-4 text-center">
